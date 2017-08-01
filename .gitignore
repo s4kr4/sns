@@ -24,5 +24,6 @@
 /public/packs
 /node_modules
 /vendor/bundle
+/vendor/bin
 
 public/packs-test
