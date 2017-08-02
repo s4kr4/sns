@@ -31,6 +31,9 @@ end
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+end
+
+group :development, :test do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
@@ -38,7 +41,7 @@ group :development do
   gem "rspec-rails"
   gem 'guard'
   gem "guard-rails", require: false
-  gem 'guard-rspec'
+  gem 'guard-rspec', require: false
   gem 'guard-bundler'
   gem 'guard-livereload'
 end
