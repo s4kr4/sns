@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+
+@mixin centering {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+}
+
+#main {
+  @include centering;
+}
+
+header {
+  height: 50px;
+  width: 100%;
+  background: #000;
+
+  #header-container {
+    @include centering;
+
+    #title {
+      font-weight: bold;
+      font-size: xx-large;
+      color: #fff;
+    }
+  }
+}
+
+footer {
+  height: 50px;
+  width: 100%;
+
+  #footer-container {
+    @include centering;
+  }
+}
