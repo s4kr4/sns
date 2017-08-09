@@ -1,0 +1,13 @@
+h1 Sign Up
+
+= form_for(@user, url: signup_path) do |f|
+  .form-row
+    = f.label :name
+    = f.text_field :name, class: 'form-item'
+
+  .form-row
+    = f.label :email
+    = f.text_field :email, class: 'form-item'
+
+  .form-row
+    = f.submit "Submit", class: 'btn form-item'
