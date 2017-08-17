@@ -10,4 +10,12 @@ h1 Sign Up
     = f.text_field :email, class: 'form-item'
 
   .form-row
+    = f.label :password
+    = f.password_field :password, class: 'form-item'
+
+  .form-row
+    = f.label :password_confirmation, "Confirmation"
+    = f.password_field :password_confirmation, class: 'form-item'
+
+  .form-row
     = f.submit "Submit", class: 'btn form-item'
