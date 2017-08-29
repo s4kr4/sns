@@ -1,0 +1,17 @@
+= provide(:title, "Log in")
+h1 Log in
+
+= form_for(:session, url: login_path) do |f|
+  .form-row
+    = f.label :name
+    = f.text_field :name, class: 'form-item'
+
+  .form-row
+    = f.label :password
+    = f.password_field :password, class: 'form-item'
+
+  .form-row
+    = f.submit "Log in", class: "btn form-item"
+
+p or
+= link_to "Sign up", signup_path

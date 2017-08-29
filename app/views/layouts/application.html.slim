@@ -10,6 +10,8 @@ html
   body
     = render 'layouts/header'
     #main
+      - flash.each do |type, message|
+        = content_tag(:div, message, class: "alert alert-#{type}")
       = yield
     = render 'layouts/footer'
 
