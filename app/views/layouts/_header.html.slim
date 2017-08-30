@@ -4,7 +4,11 @@ header
       | SOCIAL
     .nav
       ul.nav-list
-        li.nav-item
-          = link_to "Sign up", signup_path, {:class => "text-white"}
-        li.nav-item
-          a.text-white href="#" Log in
+        - if logged_in?
+          li.nav-item
+            = link_to "Log out", logout_path, :method => :delete, :class => "text-white"
+        - else
+          li.nav-item
+            = link_to "Sign up", signup_path, :class => "text-white"
+          li.nav-item
+            = link_to "Log in", login_path, :class => "text-white"
